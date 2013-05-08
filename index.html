@@ -13,108 +13,17 @@
 
     <body>
         <div id="container">
-            <div id="results"></div>
-
-            <div id="slider"></div>
-
-            <div id="dial">
-                <div class="time">0AM</div>
-                <div class="time">1AM</div>
-                <div class="time">2AM</div>
-                <div class="time">3AM</div>
-                <div class="time">4AM</div>
-                <div class="time">5AM</div>
-                <div class="time">6AM</div>
-                <div class="time">7AM</div>
-                <div class="time">8AM</div>
-                <div class="time">9AM</div>
-                <div class="time">10AM</div>
-                <div class="time">11AM</div>
-                <div class="time">12PM</div>
-                <div class="time">1PM</div>
-                <div class="time">2PM</div>
-                <div class="time">3PM</div>
-                <div class="time">4PM</div>
-                <div class="time">5PM</div>
-                <div class="time">6PM</div>
-                <div class="time">7PM</div>
-                <div class="time">8PM</div>
-                <div class="time">9PM</div>
-                <div class="time">10PM</div>
-                <div class="time">11PM</div>
+            <div id="title">
+                <div id="title-text">early birds || night owls?</div>
+                <div id="key">
+                    <div class="computer"></div> 
+                    <div id="key-text">= 15</div>
+                </div>
             </div>
+
+            <div id="results"></div>
+            <div id="slider"></div>
+            <div id="time"></div>
         </div>
     </body>
 </html>
-
-<script type="text/javascript">
-    $(function() {
-        var colors = ['#053645', '#194654', '#2E5764', '#436873', '#587983', '#6D8992', '#829AA2',
-                      '#829AA2', '#6D8992', '#587983', '#436873', '#2E5764', '#194654', '#053645'];
-
-        var results = [184, 280,
-                      202,
-                      839,
-                      228,
-                      515,
-                      147,
-                      395,
-                      344,
-                      774,
-                      297,
-                      455,
-                      629,
-                      327,
-                      437,
-                      1120,
-                      436,
-                      603,
-                      944,
-                      645,
-                      990,
-                      1838,
-                      309,
-                      1344];
-
-        $("#slider").slider({
-            step: 1,
-            max: 24,
-            value: 7,
-
-            change: function(event, ui) {
-                var colorIndex = Math.floor(ui.value/2);
-                var resultsIndex = ui.value;
-
-                $('body').animate({
-                    backgroundColor: colors[colorIndex]
-                }, 1000);
-                var html = "";
-                for (var i = 0; i < Math.floor(results[resultsIndex]/10); i++) {
-                    html += '<div style="background-image: url(\'images/computer-icon.png\'); margin: 10px; background-repeat: no-repeat; height: 50px; float: left; width:38px;"></div>';
-                }
-                var x = ((results[resultsIndex]%10)/10) * 38;
-                html += '<div style="background-image: url(\'images/computer-icon.png\'); margin: 10px; background-repeat: no-repeat; height: 50px; float: left; width:'+ x + 'px;"></div>';
-                
-                $('#results').hide().html(html).fadeIn(1000);
-                
-            }
-        });
-
-        var colorIndex = Math.floor($("#slider").slider('value')/2);
-        var resultsIndex = $("#slider").slider('value');
-
-        $('body').animate({
-            backgroundColor: colors[colorIndex]
-        }, 1000);
-        
-        var html = "";
-        for (var i = 0; i < Math.floor(results[resultsIndex]/10); i++) {
-            html += '<div style="background-image: url(\'images/computer-icon.png\'); margin: 10px; background-repeat: no-repeat; height: 50px; float: left; width:38px;"></div>';
-        }
-        
-        var x = ((results[resultsIndex]%10)/10) * 38;
-        html += '<div style="background-image: url(\'images/computer-icon.png\'); margin: 10px; background-repeat: no-repeat; height: 50px; float: left; width:'+ x + 'px;"></div>';
-        
-        $('#results').hide().html(html).fadeIn(1000);
-     });
-</script>
