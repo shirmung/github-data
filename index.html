@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>untitled</title>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <script src="js/lib/jquery-1.9.1.min.js"></script>
+        <script src="js/lib/jquery-ui.js"></script>
+        <script src="js/lib/jquery.color-2.1.2.min.js"></script>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="results">
+            </div>
+
+            <div id="slider"></div>
+
+            <div id="dial">
+                <div class="time">0AM</div>
+                <div class="time">1AM</div>
+                <div class="time">2AM</div>
+                <div class="time">3AM</div>
+                <div class="time">4AM</div>
+                <div class="time">5AM</div>
+                <div class="time">6AM</div>
+                <div class="time">7AM</div>
+                <div class="time">8AM</div>
+                <div class="time">9AM</div>
+                <div class="time">10AM</div>
+                <div class="time">11AM</div>
+                <div class="time">12PM</div>
+                <div class="time">1PM</div>
+                <div class="time">2PM</div>
+                <div class="time">3PM</div>
+                <div class="time">4PM</div>
+                <div class="time">5PM</div>
+                <div class="time">6PM</div>
+                <div class="time">7PM</div>
+                <div class="time">8PM</div>
+                <div class="time">9PM</div>
+                <div class="time">10PM</div>
+                <div class="time">11PM</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    $(function() {
+        var colors = ['#053645', '#194654', '#2E5764', '#436873', '#587983', '#6D8992', '#829AA2',
+                      '#829AA2', '#6D8992', '#587983', '#436873', '#2E5764', '#194654', '#053645'];
+
+        $("#slider").slider({
+            step: 1,
+            max: 24,
+            value: 7,
+
+            change: function(event, ui) {
+                var index = Math.floor(ui.value/2);
+
+                $('body').animate({
+                    backgroundColor: colors[index]
+                }, 1000);
+            }
+        });
+
+        var index = Math.floor($("#slider").slider('value')/2);
+
+        $('body').animate({
+            backgroundColor: colors[index]
+        }, 1000);
+     });
+</script>
