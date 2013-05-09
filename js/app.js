@@ -18,7 +18,7 @@ $(function() {
                 backgroundColor: colors[colorIndex]
             }, 1000);
 
-            if (resultsIndex <= 3 || resultsIndex >= 9) {
+            if (resultsIndex <= 6 || resultsIndex >= 19) {
                 $('body').css('background-image', 'url(images/sky.png)');
             } else {
                 $('body').css('background-image', '');
