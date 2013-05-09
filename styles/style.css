@@ -34,17 +34,25 @@
     padding-top: 60px;
 }
 
+#time {
+    width: 100px;
+    height: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
 .computer {
-    background-image: url('../images/computer-icon.png');
+    background-image: url(../images/computer-icon.png);
     background-repeat: no-repeat;
     float: left;
-    margin: 10px;
     height: 50px;
     width: 38px;
+    margin: 10px;
 }
 
 .ui-slider-horizontal {
-	height: .4em;
+	height: 0.4em;
 }
 
 .ui-slider .ui-slider-handle {

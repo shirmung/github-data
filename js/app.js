@@ -8,7 +8,7 @@ $(function() {
     $("#slider").slider({
         step: 1,
         max: 23,
-        value: 7,
+        value: 8,
 
         change: function(event, ui) {
             var colorIndex = Math.floor(ui.value/2);
@@ -20,7 +20,7 @@ $(function() {
 
             var html = "";
 
-            for (var i = 0; i < Math.floor(results[resultsIndex]/15); i++) {
+            for (var i = 0; i < Math.floor(results[resultsIndex] / 15); i++) {
                 html += '<div class="computer"></div>';
             }
 
@@ -28,10 +28,11 @@ $(function() {
             html += '<div class="computer" style="width: ' + partial + 'px;"></div>';
     
             $('#results').hide().html(html).fadeIn(1000);
+            $('#time img').hide().attr('src', 'images/' + resultsIndex + '.png').fadeIn(1000);
         }
     });
 
-    var colorIndex = Math.floor($("#slider").slider('value')/2);
+    var colorIndex = Math.floor($("#slider").slider('value') / 2);
     var resultsIndex = $("#slider").slider('value');
 
     $('body').animate({
@@ -40,7 +41,7 @@ $(function() {
 
     var html = "";
 
-    for (var i = 0; i < Math.floor(results[resultsIndex]/15); i++) {
+    for (var i = 0; i < Math.floor(results[resultsIndex] / 15); i++) {
         html += '<div class="computer"></div>';
     }
 
