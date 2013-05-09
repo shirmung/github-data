@@ -1,12 +1,3 @@
-SELECT repository_created_at, FROM [publicdata:samples.github_timeline] WHERE HASH(created_at) % 400 == 0;
-
-0AM: 184
-1AM: 280
-2AM: 202
-3AM: 839
-4AM: 228
-5AM: 515
-6AM: 147
 7AM: 395
 8AM: 344
 9AM: 774
@@ -18,9 +9,17 @@ SELECT repository_created_at, FROM [publicdata:samples.github_timeline] WHERE HA
 3PM: 1120
 4PM: 436
 5PM: 603
-6PM: 944
+6PM: 944 = 6761
+
 7PM: 645
 8PM: 990
 9PM: 1838
 10PM: 309
 11PM: 1344
+0AM: 184
+1AM: 280
+2AM: 202
+3AM: 839
+4AM: 228
+5AM: 515
+6AM: 147 = 7521
