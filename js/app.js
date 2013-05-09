@@ -8,7 +8,7 @@ $(function() {
     $("#slider").slider({
         step: 1,
         max: 23,
-        value: 8,
+        value: 7,
 
         change: function(event, ui) {
             var colorIndex = Math.floor(ui.value/2);
