@@ -18,6 +18,12 @@ $(function() {
                 backgroundColor: colors[colorIndex]
             }, 1000);
 
+            if (resultsIndex <= 3 || resultsIndex >= 9) {
+                $('body').css('background-image', 'url(images/sky.png)');
+            } else {
+                $('body').css('background-image', '');
+            }
+
             var html = "";
 
             for (var i = 0; i < Math.floor(results[resultsIndex] / 15); i++) {
