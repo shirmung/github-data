@@ -33,7 +33,8 @@ $(function() {
             var partial = ((results[resultsIndex] % 15) / 15) * 38;
             html += '<div class="computer" style="width: ' + partial + 'px;"></div>';
     
-            $('#results').hide().html(html).fadeIn(1000);
+            $('#results').html(html);
+            $('#results .computer').fadeIn(1000);
             $('#time img').hide().attr('src', 'images/' + resultsIndex + '.png').fadeIn(1000);
         }
     });
@@ -54,5 +55,6 @@ $(function() {
     var partial = ((results[resultsIndex] % 15) / 15) * 38;
     html += '<div class="computer" style="width: ' + partial + 'px;"></div>';
 
-    $('#results').hide().html(html).fadeIn(1000);
+    $('#results').html(html);
+    $('#results .computer').fadeIn(1000);
 });
